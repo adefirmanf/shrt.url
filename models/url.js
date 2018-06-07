@@ -10,7 +10,8 @@ class URL {
         this.data = Model;
     }
     async create(url) {
-        let shorten = sh.unique(new Date())
+        let RandomizeString = Math.floor(Math.random() * url.length + 1) 
+        let shorten = sh.unique(url[RandomizeString] + url + Math.floor(Math.random() * new Date().getMilliseconds()) + 1)
         const { data } = this;
         const Create = new data({
             id : shorten,

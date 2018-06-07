@@ -4,7 +4,8 @@ const Data = require('../models/url')
 
 Router.get('/:id', (req, res, next)=>{
     Data.find(req.params.id).then((response)=>{
-        res.json(response[0])
+        console.log(response[0].url)
+        res.redirect(response[0].url)
     })
 })
 

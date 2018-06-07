@@ -6,11 +6,13 @@ const Mongoose = require('mongoose')
 const index = require('./routes/index')
 const view = require('./routes/view')
 
+app.set('view engine', 'ejs')
 app.use(bodyParser.json())
+app.use(express.static('public'))
 
 Mongoose.connect('mongodb+srv://john-doe_10:admin12345@maincluster-wf4uk.mongodb.net/test?retryWrites=true', (err)=>{
     if(!err){
-        console.log("Yeayy, you connected!")
+        console.log("Mongo Atlas Ready!")
     }else{
     console.log(err)
     }

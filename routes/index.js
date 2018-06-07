@@ -3,9 +3,7 @@ const Router = express.Router()
 const Data = require('../models/url')
 
 Router.get('/', (req, res, next)=>{
-    Data.find().then((response)=>{
-        res.json(response)
-    })
+    res.render('index')
 })
 
 Router.post('/url', (req, res, next)=>{
