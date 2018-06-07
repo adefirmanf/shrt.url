@@ -23,8 +23,8 @@ app.use('/', index)
 app.use('/v', view)
 
 // Listen server
-app.listen(3000, ()=>{
-    console.log("Port is listening on 3000")
+app.listen(process.env.PORT, ()=>{
+    console.log(`PORT is listening on ${process.env.PORT}`)
 })
 
 
