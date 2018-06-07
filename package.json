@@ -12,8 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start" : "PORT=80 node index.js",
-    "dev" : "PORT=3000 node index.js",
+    "start" : "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ade Firman F",
